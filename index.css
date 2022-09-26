@@ -9,15 +9,6 @@ body {
   height: 100vh;
 }
 
-ul {
-  /* list-style: "- "; */
-}
-
 a {
   text-decoration: none;
-}
-
-@media screen {
-}
-.page :nth-child(2) > * {
 }
