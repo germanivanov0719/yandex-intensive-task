@@ -4,29 +4,64 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- CSS only -->
+    <meta name="description" content="Сайт-визитка для Яндекс Интенсивов." />
+    <!-- Bootstrap CSS -->
     <link
+      defer
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous" />
+    <!-- Bootstrap JavaScript Bundle -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./index.css" />
     <title>Обо мне</title>
   </head>
 
   <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="container-fluid">
+        <div></div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <div class="navbar-nav me-auto mr-auto">
+            <a class="nav-item active nav-link" href="#about">Обо мне</a>
+            <a class="nav-item nav-link" href="#achievements">
+              Образование и достижения
+            </a>
+            <a class="nav-item nav-link" href="#technologies">
+              Технологии и языки
+            </a>
+            <a class="nav-item nav-link" href="#experience">Опыт</a>
+            <a class="nav-item nav-link" href="#projects">Проекты</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Content -->
     <div class="container">
       <div class="d-sm-flex justify-content-center gap-5 flex-warp">
         <!-- Picture can be added later -->
         <div>
-          <h1>Иванов Герман Алексеевич</h1>
-          <h2>Full stack разработчик</h2>
+          <h1 id="about">Иванов Герман Алексеевич</h1>
           <p>
-            Учусь в 9 классе (Математическая вертикаль). Более 4 лет обучаюсь
-            программированию, около 2 лет занимаюсь Frontend разработкой. Помимо
-            программирования также интересуюсь математикой и владею английским
-            на уровне C1.
+            Более 4 лет обучаюсь программированию, преимущественно на Python,
+            около 2 лет занимаюсь frontend разработкой. Учусь в 9 классе по
+            программе «Математической вертикали», интересуюсь математикой и
+            владею английским на уровне C1.
           </p>
           <ul class="list-unstyled">
             <li>Город: Москва, Россия</li>
@@ -45,58 +80,195 @@
             </li>
             <li>
               Номер телефона:
-              <a href="tel:+7 968 742 88 98">+7 968 742 88 98</a>
+              <a href="tel:+7 968 742 88 98" class="text-nowrap">
+                +7 968 742 88 98
+              </a>
             </li>
           </ul>
         </div>
       </div>
       <div>
-        <h2>Образование и достижения</h2>
-        <ul>
-          <li>
-            Лицей Академии Яндекса (2020–2022)
-            <p>Сертификаты: 2101 65166 (1 год) и 2202 65166 (2 год)</p>
-          </li>
-          <li>
-            Призер муниципального этапа ВсОШ по информатике (7 и 8 класс)
-            <p>
-              Сертификаты: 226 8144-44177 (7 класс) и 281 9768-56587 (8 класс)
-            </p>
-          </li>
-        </ul>
+        <h2 id="achievements">Образование и достижения</h2>
+        <div class="accordion mb-3" id="accordionAchievements">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#YL-info">
+                Выпускник Лицей Академии Яндекса (2020–2022 год)
+              </button>
+            </h3>
+            <div
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionAchievements"
+              id="YLInfo">
+              <div class="accordion-body">
+                <p>
+                  2 года обучения Python, в том числе и backend разработке на
+                  Flask.
+                </p>
+                <p>Сертификаты:</p>
+                <ul>
+                  <li>2101 65166 (1 год)</li>
+                  <li>2202 65166 (2 год)</li>
+                </ul>
+                <p>
+                  Проверить сертификат можно
+                  <a
+                    href="https://lyceum.yandex.ru/certificate/check"
+                    target="_blank">
+                    по ссылке.
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#olympiads-info">
+                Призер муниципального этапа ВсОШ по информатике (в 2020 и 2021
+                годах)
+              </button>
+            </h3>
+            <div
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionAchievements"
+              id="OlympiadsInfo">
+              <div class="accordion-body">
+                <p>
+                  Дважды призер муниципального этапа ВсОШ по информатике: в 7 и
+                  8 классе.
+                </p>
+                <p>Сертификаты:</p>
+                <ul>
+                  <li>226 8144-44177 (7 класс)</li>
+                  <li>281 9768-56587 (8 класс)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div>
-        <h2>Языки</h2>
+        <h2 id="technologies">Технологии и языки</h2>
         <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>Python</li>
-          <li>Bash</li>
-        </ul>
-      </div>
-      <div>
-        <h2>Технологии</h2>
-        <ul>
+          <li>HTML, CSS, JavaScript</li>
           <li>Bootstrap 5</li>
           <li>Progressive Web Apps (PWA)</li>
           <li>Svelte</li>
-          <li>Flask</li>
-          <li>Linux/Unix</li>
+          <li>Flask, Jinja 3 (Python)</li>
         </ul>
+        <p>
+          Также я знаю Linux/Unix, git, Chrome DevTools, знаком с vim, bash,
+          zsh, а также несколько других языков и фреймворков, которые не связаны
+          с разработкой веб-приложений/сайтов.
+        </p>
       </div>
       <div>
-        <h2>Проекты</h2>
-        <ul>
-          <li>
-            <a href="https://germanivanov0719.github.io/grades/">Grades</a>
-            <p>Сайт для расчета среднего балла и количества оценок до целей.</p>
-          </li>
-          <li>
-            Сайт для продажи билетов
-            <p>Не сильно интересный проект с Яндекс Лицея, но с бэкендом.</p>
-          </li>
-        </ul>
+        <h2 id="experience">Опыт</h2>
+        <p>
+          Заниматься frontend разработкой начал с 2020 года, хотя основы HTML и
+          CSS знал и до этого. Писать серверную часть и код на JavaScript начал
+          относительно недавно (около года назад), но, благодаря других языкам,
+          синтаксис я освоил быстро. Также я интересуюсь разработкой
+          кроссплатформенных настольных и мобильных приложений на таких
+          фреймворках, как Electron, Dart и других, где знания frontend сильно
+          помогают.
+        </p>
+      </div>
+      <div>
+        <h2 id="projects">Проекты</h2>
+        <div class="accordion mb-3" id="accordionProjects">
+          <div class="accordion-item" id="grades">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#grades-info">
+                Веб-приложение Grades
+              </button>
+            </h3>
+            <div
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionProjects"
+              id="grades-info">
+              <div class="accordion-body">
+                <p>
+                  Сайт для расчета среднего балла и количества оценок до целей.
+                  Я решил создать его когда с обновлением электронного дневника
+                  в Москве он начал неправильно считать средний балл, и мои
+                  одноклассники не могли понять, сколько им нужно получить
+                  оценок до какого-то результата в триместре. Он позволяет
+                  настраивать разные параметры (например, дробную часть для
+                  округления вверх) и не ограничен подсчетами только в верхнюю
+                  сторону как электронный дневник.
+                </p>
+                <p>
+                  С точки зрения технологий этот проект интересен тем, что он
+                  сделан в виде PWA с кешированием, что позволяет ему работать
+                  офлайн (пока браузер хранит кеш). Пользовательские настройки
+                  сохраняются в localStorage. Сайт не требует настройки
+                  серверной части, так как все вычисления проходят локально (код
+                  написан на JavaScript). Клиентская часть написана на обычном
+                  HTML с Bootstrap и небольшим количеством моих стилей.
+                </p>
+                <p>
+                  Ссылки:
+                  <a
+                    target="_blank"
+                    href="https://germanivanov0719.github.io/grades/">
+                    сайт,
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://github.com/germanivanov0719/grades">
+                    репозиторий GitHub.
+                  </a>
+                  Исходный код доступен под MIT License.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" id="ticket-selling-website">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#ticket-selling-website-info">
+                Сайт для продажи билетов (проект с Яндекс Лицея)
+              </button>
+            </h3>
+            <div
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionProjects"
+              id="ticket-selling-website-info">
+              <div class="accordion-body">
+                <p>
+                  Сайт не с самой интересной идеей, но достаточно интересной
+                  серверной частью. Есть REST API, используются Flask с Jinja,
+                  данные хранятся в SQLite. Клиентская часть также реализована с
+                  помощью Bootstrap.
+                </p>
+                <p>
+                  <a
+                    href="https://github.com/germanivanov0719/ticket-selling-website">
+                    Ссылка на репозиторий GitHub.
+                  </a>
+                  Лицензия: Apache License, Version 2.0.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>Эти и другие проекты доступны в моем профиле GitHub.</p>
       </div>
     </div>
   </body>
